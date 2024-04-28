@@ -1,13 +1,14 @@
 # Frontend
 
-This directory contains the frontend code for the project. It is built using Vue.js with Vite as the build tool.
+# Vue 3 + Vite:
+
+This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+
+## Recommended IDE Setup
+
+- [VS Code](https://code.visualstudio.com/) + [Vue - Official](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (previously Volar) and disable Vetur
 
 ## Project Structure
-
-- `index.html`: The entry point HTML file that serves as the container for the Vue.js application.
-- `src/main.js`: The entry point JavaScript file that initializes the Vue.js app and mounts it to the DOM.
-- `src/App.vue`: The root component of the Vue.js application. It defines the structure and behavior of the main app.
-- `src/components/HelloWorld.vue`: A sample component in Vue.js. It represents a simple "Hello World" component.
 
 ## Development Setup
 
@@ -16,7 +17,6 @@ This directory contains the frontend code for the project. It is built using Vue
    ```
    npm install
    ```
-
 2. Start the development server by running the following command:
 
    ```
