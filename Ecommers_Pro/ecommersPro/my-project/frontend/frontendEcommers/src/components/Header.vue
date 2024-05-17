@@ -15,7 +15,6 @@
             </div>
         </header>
 </template>
-
 <style>
 /* Estilos generales */
 
@@ -26,19 +25,27 @@
   top: 0;
   left: 0;
   display: flex;
-  width: 100vw
-  
+  width: 100vw;
+  justify-content: space-between; /* Add this to evenly distribute the items */
+  padding: 10px; /* Add padding to create space around the items */
+}
+
+.logo {
+  margin-right: auto; /* Push the logo to the left as much as possible */
 }
 
 .logo img {
   height: 50px; /* Ajustar el tamaño del logo según sea necesario */
 }
 
+.search {
+  margin: 0 10px; /* Add margin to create space between elements */
+}
+
 .search input[type="text"] {
   padding: 8px;
   border-radius: 5px;
   border: 1px solid #ccc;
-  margin-right: 5px;
 }
 
 .search button {
@@ -48,6 +55,10 @@
   background-color: #4CAF50;
   color: white;
   cursor: pointer;
+}
+
+.cart {
+  margin-left: auto; /* Push the cart button to the right as much as possible */
 }
 
 .cart button {
