@@ -1,6 +1,6 @@
 from django.db import models
-from orders.models import Orders
-from productos.models import Products
+from order.models import Orders
+from product.models import Products
 
 # Create your models here.
 class OrderDetails(models.Model):

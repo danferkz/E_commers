@@ -1,6 +1,6 @@
 from django.db import models
 from user.models import Users
-from productos.models import Products
+from product.models import Products
 
 # Create your models here.
 class StockUpdates(models.Model):
@@ -10,9 +10,11 @@ class StockUpdates(models.Model):
     user = models.ForeignKey(Users, on_delete=models.CASCADE, verbose_name="Usuario")
     product = models.ForeignKey(Products, on_delete=models.CASCADE, verbose_name="Producto")
     
+    
     class Meta:
         verbose_name = 'Actualización de stock'
         verbose_name_plural = 'Actualizaciones de stock'
+        ordering = ['date', 'product', 'user']
 
     def _str_(self):
         return self.name  

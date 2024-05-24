@@ -20,3 +20,26 @@ class UserList(APIView):
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
     except Exception as e:
         print(str(e))
+        
+class UserUpdate(APIView):
+    try:
+        permission_classes = [IsAuthenticated]
+        authentication_classes = [TokenAuthentication]
+        def get(self, request, pk):
+            user = Users.objects.get(pk=pk)
+            serializer = UserSerializer(user)
+            return Response(serializer.data)
+        def put(self, request, pk):
+            user = Users.objects.get(pk=pk)
+            serializer = UserSerializer(user, data=request.data)
+            if serializer.is_valid():
+                serializer.save()
+                return Response(serializer.data)
+            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+        def delete(self, request, pk):
+            user = Users.objects.get(pk=pk)
+            user.delete()
+            return Response(status=status.HTTP_204_NO_CONTENT)
+    except Exception as e:
+        print(str(e))
+        
