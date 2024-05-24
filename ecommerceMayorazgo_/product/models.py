@@ -16,12 +16,20 @@ class Categories(models.Model):
 
 
 class Products(models.Model):
+    price_type_choices = (
+        ('Unitario', 'Unitario'),
+        ('media-docena', 'Media docena'),
+        ('docena', 'Docena')
+        
+    )
+    
     product_id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=255 , verbose_name='Nombre')
     category= models.ForeignKey(Categories, on_delete=models.CASCADE,related_name='get_products',verbose_name='Categoría')
-    price = models.FloatField(verbose_name='Precio')
+    price = models.CharField( max_length=50, choices=price_type_choices, default='Unitario', verbose_name='Tipo de precio')
+      
     stock = models.IntegerField(verbose_name='Cantidad en stock')
-    image = models.ImageField(upload_to='product_images', verbose_name='Imagen', blank=True, null=True)
+    image = models.ImageField(upload_to='product', default='imagen_default.png', verbose_name='Imagen')
     description = models.TextField(verbose_name='Descripción')
     proveedor = models.ForeignKey(Providers, on_delete=models.CASCADE, verbose_name='Proveedor')
     history = HistoricalRecords()
