@@ -29,7 +29,7 @@ class Products(models.Model):
     price = models.CharField( max_length=50, choices=price_type_choices, default='Unitario', verbose_name='Tipo de precio')
       
     stock = models.IntegerField(verbose_name='Cantidad en stock')
-    image = models.ImageField(upload_to='products', default='imagen_default.png', verbose_name='Imagen', blank=True, null=True)
+    image = models.ImageField(upload_to='product', default='imagen_default.png', verbose_name='Imagen')
     description = models.TextField(verbose_name='Descripción')
     proveedor = models.ForeignKey(Providers, on_delete=models.CASCADE, verbose_name='Proveedor')
     history = HistoricalRecords()
