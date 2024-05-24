@@ -26,8 +26,9 @@ class Products(models.Model):
     product_id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=255 , verbose_name='Nombre')
     category= models.ForeignKey(Categories, on_delete=models.CASCADE,related_name='get_products',verbose_name='Categoría')
-    price = models.CharField( max_length=50, choices=price_type_choices, default='Unitario', verbose_name='Tipo de precio')
-      
+    price_type = models.CharField( max_length=50, choices=price_type_choices, default='Unitario', verbose_name='Tipo de precio')
+    price = models.DecimalField(max_digits=10, decimal_places=2, verbose_name='Precio')
+    
     stock = models.IntegerField(verbose_name='Cantidad en stock')
     image = models.ImageField(upload_to='product', default='imagen_default.png', verbose_name='Imagen')
     description = models.TextField(verbose_name='Descripción')
