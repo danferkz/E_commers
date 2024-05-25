@@ -12,7 +12,7 @@ const routes = [
     
         name: 'About',
     
-        component: () => import('../views/About.vue')}
+        component: () => import('../views/About.vue')}/// se mueve para otra vista
 ]
 
 const router = crateRouter({
