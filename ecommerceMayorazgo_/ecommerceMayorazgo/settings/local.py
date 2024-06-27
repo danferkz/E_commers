@@ -19,6 +19,34 @@ DATABASES = {
         'HOST': 'localhost',
         'PORT': '5432',
     }
+         'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'tienda',
+        'USER': 'postgres',
+        'PASSWORD': '14CEB00F',
+        'HOST': 'localhost',
+        'PORT': '5432',
+    }
+         'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'tienda',
+        'USER': 'postgres',
+        'PASSWORD': '14CEB00F',
+        'HOST': 'localhost',
+        'PORT': '5432',
+    }
+         'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'tienda',
+        'USER': 'postgres',
+        'PASSWORD': '14CEB00F',
+        'HOST': 'localhost',
+        'PORT': '5432',
+    }
+         'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'tienda',
+        'USER': 'postgres',
+        'PASSWORD': '14CEB00F',
+        'HOST': 'localhost',
+        'PORT': '5432',
+    }
 }
 '''
 

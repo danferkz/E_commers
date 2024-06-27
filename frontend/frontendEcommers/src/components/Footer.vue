@@ -1,32 +1,13 @@
 <template>
-    <footer class="GFooter">
-    <div class="footer-content">
-        <p>© 2024 Tu Empresa. Todos los derechos reservados.</p>
-    </div>
+    <footer class="text-center py-4 my-4 border-top">
+        <p>&copy; 2023.</p>
     </footer>
 </template>
 
+<script setup>
+
+</script>
 
 <style>
-/* Estilos generales */
-
-.GFooter {
-  background-color: #333;
-  color: #fff;
-  padding: 20px;
-  text-align: center;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-}
-
-.footer-content {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.footer-content p {
-  margin: 0;
-}
+    /* Estilos adicionales del footer */
 </style>

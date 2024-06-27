@@ -1,13 +1,15 @@
+import './assets/main.css'
+
 import { createApp } from 'vue'
-import './style.css'
 import App from './App.vue'
-import router from './router';
-import store from './store';
-import 'bootstrap'
+import router from './router'
+import store from './store/'
+
 import 'bootstrap/dist/css/bootstrap.min.css'
 
+const app = createApp(App)
 
-console.log(import.meta.env.VITE_API_URL); // Output: 'http://localhost:5173'
-console.log(import.meta.env.VITE_DEBUG_MODE);
+app.use(router)
+app.use(store)
 
-createApp(App).use(store).use(router).mount('#app')
+app.mount('#app')

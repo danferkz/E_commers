@@ -1,16 +1,13 @@
 <script setup>
-import WebHeader from './components/Header.vue'
-import WebFooter from './components/Footer.vue'
-import WebCarrousel from './components/Carrousel.vue'
-import WebCategories from './components/Categories.vue'
+import { RouterLink, RouterView } from 'vue-router'
+import HelloWorld from './components/HelloWorld.vue'
+import NavBar from './components/NavBar.vue'
+import HomeView from './views/HomeView.vue';
 </script>
 
 <template>
-  <WebHeader/>
-  <WebCarrousel/>
-  <WebCategories/>   
-  <WebFooter/>
+      <HomeView/>
 </template>
 
-<style>
+<style scoped>
 </style>
